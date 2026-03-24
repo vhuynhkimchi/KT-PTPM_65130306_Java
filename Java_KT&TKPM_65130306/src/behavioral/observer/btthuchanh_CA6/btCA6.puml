@@ -1,0 +1,31 @@
+@startuml
+
+class PlayerData{
+    int thoigian,  countdown, grade
+
+    + void attach(PlayerDataListener listener)
+    + void setThoigian(int thoigian)
+    + void setCountdown(int countdown)
+    + void setGrade(int grade)
+}
+class DashBoard{
+
+}
+
+interface PlayerDataListener{
+    void listen(PlayerData data)
+}
+
+PlayerDataListener <|.. DashBoard
+DashBoard --> PlayerData: playerdata
+PlayerData o--> PlayerDataListener: listener
+
+note right of PlayerData
+Các setter là các notify
+ví dụ: setThoigian(int thoigian) {
+    this.thoigian = thoigian
+    nếu listener != null:
+    listener.listen(this)
+}
+end note
+@enduml

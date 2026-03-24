@@ -1,0 +1,21 @@
+@startuml
+interface ITokenize {
+List<String> tokennize()
+}
+class TachTu {
+    String s;
+}
+class LoaiBoTuDung {
+    List<String> tuDungs;
+}
+class LoaiBoDauCau
+abstract class TokenDecorator {
+    List<String> tokennize()
+}
+
+ITokenize <|.. TachTu
+ITokenize <|.. TokenDecorator
+ITokenize <-- TokenDecorator:token
+TokenDecorator <|-- LoaiBoTuDung
+TokenDecorator <|-- LoaiBoDauCau
+@enduml

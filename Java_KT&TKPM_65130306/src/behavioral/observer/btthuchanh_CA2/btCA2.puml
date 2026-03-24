@@ -1,0 +1,21 @@
+@startuml
+
+class Button {
+  void attach(ButtonListener listener)
+  void click()
+}
+
+class Activity {
+    int cnt
+    void onClick()
+}
+
+interface ButtonListener {
+  void onClick()
+}
+
+ButtonListener <|.. Activity
+Activity --> Button : button
+Button o--> ButtonListener : activity
+
+@enduml

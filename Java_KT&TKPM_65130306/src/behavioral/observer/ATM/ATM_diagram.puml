@@ -1,0 +1,24 @@
+@startuml
+class ATM{
+    + void nhanThe(ATMListener tk)
+    + void traThe()
+    + void rutTien(int soTien)
+}
+class TaiKhoan {
+    ATM atm
+    String tenTK
+    int soDu
+    void duaThe()
+    void rutThe()
+}
+
+interface ATMListener{
+   bool kiemTraSoDu(int soTien)
+   void nhanThongBao(int soTienRut, bool thanhCong)
+}
+ATM --> ATMListener: taikhoan
+ATMListener <|.. TaiKhoan
+TaiKhoan --> ATM : atm
+
+
+@enduml

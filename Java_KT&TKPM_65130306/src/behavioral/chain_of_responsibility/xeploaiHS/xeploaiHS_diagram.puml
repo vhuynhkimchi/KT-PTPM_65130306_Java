@@ -1,0 +1,14 @@
+@startuml
+abstract class XepLoai {
+    String ten
+    float max
+    +{abstract} void XepLoai(float diem)
+    +{abstract} XepLoai gioiHon(XepLoai gioiHon)
+}
+class Loai
+class XuatSac
+
+XepLoai <|-- Loai
+XepLoai <|-- XuatSac
+Loai --> XepLoai : gioiHon
+@enduml

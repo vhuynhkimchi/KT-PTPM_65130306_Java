@@ -1,0 +1,14 @@
+@startuml
+abstract class NhanVienF88{
+    String ten, chucvu
+    int hanMucDuyetVay
+    +{abstract} void duyetVay(int khoanVay)
+    +{abstract} NhanVienF88 capTren(NhanVienF88 capTren)
+}
+class ChuTich
+class NhanVienChoVay
+NhanVienF88 <|-- ChuTich
+NhanVienF88 <|-- NhanVienChoVay
+NhanVienChoVay --> NhanVienF88: capTren
+
+@enduml
