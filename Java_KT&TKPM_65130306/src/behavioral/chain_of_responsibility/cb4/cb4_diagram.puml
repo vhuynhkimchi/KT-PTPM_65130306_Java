@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class PrizzeChecker{
+# PrizzeChecker nextChecker
++ PrizzeChecker setNextChecker(PrizzeChecker nextChecker)
++ {abstract} void checkTicker(String tickerNumber)
+}
+class StandasPrizzeChecker{
++ String prizzeName
++ String[] winingNumbers
++ StandasPrizzeChecker(String prizzeNamem String[] winingNumbers)
++ void checkTicker(String tickerNumber)
+}
+class ConsolationPrizzeChecker{
+- String specialPrizzeChecker
++ ConsolationPrizzeChecker(String specialPrizzeChecker)
++ void checkTicker(String tickerNumber)
+}
+class Client
+PrizzeChecker <|--StandasPrizzeChecker
+PrizzeChecker --> PrizzeChecker : nextChecker
+Client..>PrizzeChecker
+PrizzeChecker <|-- ConsolationPrizzeChecker
+@enduml

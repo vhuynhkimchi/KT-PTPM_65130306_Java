@@ -1,7 +1,8 @@
-package creational.builder;
+package creational.builder.A7;
 
 public class Computer {
     private String cpu, ram, storage, screen;
+
 
     private Computer(Builder b) {
         this.cpu = b.cpu;

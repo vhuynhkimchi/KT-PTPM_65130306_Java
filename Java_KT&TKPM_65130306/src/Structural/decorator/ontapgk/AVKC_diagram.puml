@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AVKC{
+    {abstract} float TinhTong()
+    {abstract} void hienThi()
+}
+class DonHang{}
+class SanPham{
+    String tenSP
+    int giaTien
+    String moTa
+}
+abstract class DonHangDecorator{}
+class Topping{}
+class DongGoi{}
+
+AVKC <|-- DonHang
+AVKC <|-- DonHangDecorator
+AVKC <-- DonHangDecorator : donHang
+SanPham <--* DonHang : sps
+DonHangDecorator <|-- Topping
+DonHangDecorator <|-- DongGoi
+@enduml

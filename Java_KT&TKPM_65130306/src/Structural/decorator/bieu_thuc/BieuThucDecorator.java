@@ -3,6 +3,7 @@ package Structural.decorator.bieu_thuc;
 public class BieuThucDecorator extends BieuThuc{
     BieuThuc bieuthuc;
     public BieuThucDecorator(BieuThuc bieuThuc) {
+
         this.bieuthuc= bieuThuc;
     }
 

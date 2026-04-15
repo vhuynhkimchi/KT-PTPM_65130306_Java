@@ -1,0 +1,21 @@
+@startuml
+
+class dataAccess{
+    - {static} Map<String,dataAccess> instance
+    - List<String> sps
+    - {static} dataAccess instance
+
+    - dataAccess()
+    + {static} dataAccess getInstance(String tag)
+    + void add(SanPham s)
+    + void printDS()
+}
+
+Class SanPham{
+ - String id, tenSp
+ - int sl
+ - float donGia
+ }
+
+ dataAccess *--> SanPham : sps
+@enduml

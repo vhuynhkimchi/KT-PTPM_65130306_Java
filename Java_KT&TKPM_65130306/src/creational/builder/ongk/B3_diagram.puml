@@ -1,0 +1,17 @@
+@startuml
+
+class Notification{
+    - String title, message, icon,sound, priority, action buttons
+    - Notification(Builder b)
+}
+class Builder{
+    - String title, message, icon,sound, priority, action buttons
+        + Builder builTitle(String title)
+        + Builder builMessage(String message)
+        + Builder builicon(String icon)
+        + Builder builsound(String sound)
+        + Builder builpriority(String priority)
+        + Builder builactionbnt(String action buttons)
+}
+Builder ..> Notification
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+enum Candidate{
+    DONAL_TRUMP, JOE_BIDEN
+}
+class Election{
+    - int trump, biden
+    - Election instance
+    - List<String> voteUser
+    - Election()
+    + Election getInstance()
+    # void vote (Candidate c, String userId)
+    + void myPrint()
+}
+class User{
+    - String id
+    + void vote (Candidate c)
+}
+
+User ..> Election
+@enduml

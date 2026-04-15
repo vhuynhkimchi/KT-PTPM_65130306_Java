@@ -1,0 +1,36 @@
+@startuml
+abstract class AVKC{
+    {abstract} float TinhTong()
+    {abstract} void hienThi()
+}
+class SanPham{
+    String tenSP
+    int giaTien
+    String moTa
+}
+class DonHang{
+
+}
+abstract class DonHangDecorator{
+
+}
+class Sot{
+
+}
+class DongGoi{
+
+}
+class GiamGia{
+
+}
+
+AVKC <|-- DonHang
+AVKC <|-- DonHangDecorator
+DonHangDecorator --> AVKC:donHang
+SanPham <--* DonHang: sps
+DonHangDecorator <|-- Topping
+DonHangDecorator <|-- Sot
+DonHangDecorator <|-- DongGoi
+DonHangDecorator <|-- GiamGia
+
+@enduml

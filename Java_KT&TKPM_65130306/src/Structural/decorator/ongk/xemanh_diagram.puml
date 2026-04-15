@@ -1,0 +1,27 @@
+@startuml
+abstract class TrangTriAnh{
+    String description
+    hienThiAnh()
+}
+class XemAnh{
+    hienThiAnh()
+}
+class Decorator{
+    hienThiAnh()
+}
+class BolderDecorator{
+     hienThiAnh()
+}
+class WatermarkDecorator{
+    hienThiAnh()
+}
+class FilterDecorator{
+    hienThiAnh()
+}
+
+TrangTriAnh <|-- XemAnh
+TrangTriAnh <|-- Decorator : trangtrianh
+Decorator <|-- BolderDecorator
+Decorator <|-- WatermarkDecorator
+Decorator <|-- FilterDecorator
+@enduml

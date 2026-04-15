@@ -12,5 +12,6 @@ public abstract class Abstractfile {
     public String getPath(){
         return path;
     }
+    //khai báo phương thức thêm thành phần con
     public abstract void add(Abstractfile f);
 }

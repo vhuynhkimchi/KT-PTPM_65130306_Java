@@ -4,6 +4,14 @@ public class PlayerData {
     PlayerDataListener listener;
     int thoiGian, countDown, grade;
 
+
+    public PlayerData(int thoiGian, int countDown, int grade) {
+
+        this.thoiGian = thoiGian;
+        this.countDown = countDown;
+        this.grade = grade;
+    }
+
     public void attach(PlayerDataListener listener){
         this.listener = listener;
     }

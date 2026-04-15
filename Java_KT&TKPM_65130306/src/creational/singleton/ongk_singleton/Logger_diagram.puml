@@ -1,0 +1,19 @@
+@startuml
+class Logger{
+    - {static} Logger instance
+    - Logger()
+    + {static} Logger getInstance()
+    + void writelog(logItem log)
+    + void viewLog()
+}
+class LogItem{
+    String thoiGian, noiDung, proId
+}
+class Program{
+    String id
+    + writeLog(String noiDung, String thoiGian)
+}
+
+Logger o--> LogItem: logItems
+Program ..> Logger
+@enduml
